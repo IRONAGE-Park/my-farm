@@ -1,0 +1,100 @@
+<%- include('../header')%>
+<!-- HEADER -->
+
+
+
+<link href='/stylesheets/timeline/timeline.css' rel='stylesheet' />
+<link href='/javascripts/calendar/core/main.css' rel='stylesheet' />
+<link href='/javascripts/calendar/daygrid/main.css' rel='stylesheet' />
+<link href='/javascripts/calendar/timegrid/main.css' rel='stylesheet' />
+<link href='/javascripts/calendar/list/main.css' rel='stylesheet' />
+<script src='/javascripts/calendar/core/main.js'></script>
+<script src='/javascripts/calendar/core/locales-all.js'></script>
+<script src='/javascripts/calendar/interaction/main.js'></script>
+<script src='/javascripts/calendar/daygrid/main.js'></script>
+<script src='/javascripts/calendar/timegrid/main.js'></script>
+<script src='/javascripts/calendar/list/main.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const initialLocaleCode = 'ko';
+        const calendarEl = document.getElementById('calendar');
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
+            height: '500',
+            header: {
+                left: '',
+                center: 'prevYear,prev,title,next,nextYear',
+                right: 'today'
+            },
+            weekNumbersWithinDays: true,
+            defaultDate: new Date(),
+            locale: initialLocaleCode,
+            weekNumbers: true,
+            selectable: true,
+            dateClick: function (event) {
+                console.log(event)
+            },
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2020-02-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2020-02-07',
+                    end: '2020-02-10'
+                },
+                {
+                    groupId: 999,
+                    title: 'Repeating Event',
+                    start: '2020-02-09T16:00:00'
+                },
+                {
+                    groupId: 999,
+                    title: 'Repeating Event',
+                    start: '2020-02-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2020-02-11',
+                    end: '2020-02-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2020-02-12T10:30:00',
+                    end: '2020-02-12T12:30:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2020-02-28'
+                }
+            ]
+        });
+        
+        calendar.render();
+    });
+</script>
+<div class="main">
+    <div class="content timeline">
+        <div class="schedule">
+            <div class="schedule-wrap">
+                <div class="schedule-content">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="calendar-wrap">
+            <div id='calendar'></div>
+        </div>
+    </div>
+</div>
+<%- include('../footer') %>
+<!-- FOOTER -->
+</body>
+
+</html>

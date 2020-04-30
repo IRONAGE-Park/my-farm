@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="인바이즈,다이얼 키패드 키패드, 다이얼 ,편집 컨트롤러,INVAIZ,Dial Keypad" />
+  <meta name="Author" content="인바이즈, INVAIZ" />
+  <meta name="Keywords" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
+  <meta name="Subject" content="인바이즈, INVAIZ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="인바이즈, INVAIZ" />
+  <meta property="og:description" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="http://invaiz.com" />
+  <link rel="stylesheet" href="stylesheets/reset.css">
+  <link rel="stylesheet" href="stylesheets/main.css" />
+  <link rel="stylesheet" href="stylesheets/menu.css" />
+  <link rel="stylesheet" href="stylesheets/header.css" />
+  <link rel="stylesheet" href="stylesheets/footer.css">
+  <link rel="stylesheet" href="stylesheets/media.css" />
+
+  <title>농장</title>
+</head>
+
+<body>
+  <div class="header-container">
+    <header class="header">
+      <a href="/">
+        <img src="images/logo.svg" alt="" class="header-logo" />
+      </a>
+      <div class="header-nav-box">
+        <ul class="header-nav">
+          <li class="header-nav-element">
+            <a href="/branding"> <span>소개</span> </a>
+          </li>
+          <li class="header-nav-element">
+            <a href="/product"> <span>상품</span> </a>
+          </li>
+          <li class="header-nav-element">
+            <a href="/timeline"> <span>일지</span> </a>
+          </li>
+          <li class="header-nav-element">
+            <a href="/support"> <span>문의</span> </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </div>
+  <script>
+    let header_container = document.querySelector(".header-container")
+    let header = document.querySelector(".header")
+    window.addEventListener("scroll", function () {
+      if (scrollY === 0) {
+        header_container.style.backgroundColor = "#ccc"
+        header_container.style.transition = "0.5s"
+      } else {
+        header_container.style.backgroundColor = "#29c389"
+        header_container.style.transition = "0.5s"
+      }
+    })
+  </script>

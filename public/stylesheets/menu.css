@@ -1,0 +1,89 @@
+
+/* 모바일 네비게이터  */
+
+.nav-button {
+    position: fixed;
+    display: none;
+    top:0;
+    right:0;
+    width: 40px; height: 40px;
+    z-index: 1000;
+}
+.nav-button-box {
+    position: absolute;
+    width: 66%; height: 66%;
+    top: 0; bottom: 0; left: 0; right: 0;
+    transition: all 0.5s;
+    margin: auto;
+}
+.nav-button-element {
+    position: absolute;
+    width: 100%; height: 3px;
+    background-color: black;
+    transition: all 0.5s;
+}
+.top.nav-button-element { top: 0; }
+.mid.nav-button-element { top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+.bottom.nav-button-element { bottom: 0;}
+.on.nav-button-box { height: 3px; }
+.on.nav-button-box > .top.nav-button-element {
+    /* 변경될 위치 */
+    transform: rotateZ(135deg);
+}
+.on.nav-button-box > .mid.nav-button-element {
+    /* 변경될 위치 */
+    opacity: 0;
+}
+.on.nav-button-box > .bottom.nav-button-element {
+    /* 변경될 위치 */
+    transform: rotateZ(-135deg);
+}
+
+.menu_on{
+    transform: translateX(0);
+}
+.menu_off{
+    transform: translateX(100%);
+}
+.branding{
+    background-color:white;
+}
+.invaiz_mobile_menu{
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow-y: hidden;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: all 0.7s;
+}
+.invaiz_mobile_item{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* border : 0.05px solid red; */
+    text-align: left;
+    overflow: hidden;
+
+}
+.invaiz_mobile_box{
+    width: 80vw;
+    height:100vw;
+    /* border:1px solid white; */
+    position: relative;
+    left:50%;
+    top: 30%;
+    transform: translateX(-50%) translateY(-30%);
+    text-align: left;
+}
+.mobile_link{
+    line-height: 60px;
+}

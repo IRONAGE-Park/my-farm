@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: KoPubWorld돋움체;
+} 
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+.nav-box{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+.nav_logo-box {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+}
+
+.nav_logo{
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.nav_logo img{
+  display: flex;
+  width: 137px;
+  height: 20px;
+}
+
+.nav-contents{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 100px);
+  margin-top: 50px;
+}
+.nav-contents_title{
+  font-size: 42.5px;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  color: white;
+}
+.nav-contents_list{
+  margin-bottom: 30px;
+}
+.nav-contents_item {
+  margin-left: 30px;
+  margin-bottom: 15px;
+  list-style: none;
+}
+.nav-contents_item_link {
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+/*left nav*/
+.section {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.section_title {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  color: black;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 32px;
+}

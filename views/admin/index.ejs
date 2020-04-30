@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>관리자페이지</title>
+  <link rel="stylesheet" href="/stylesheets/management/index.css" />
+</head>
+
+<body>
+  <header class="header-box">
+    <img src="/images/management/logo.svg" alt="" />
+  </header>
+  <div class="login-box">
+    <div class="login-title_box">
+      관리자 로그인
+    </div>
+    <div class="login-content_box">
+      <form action="/admin/login" method='post'>
+        아이디 <br />
+        <input type="text" name='adminID' class="input_style" />
+        비밀번호 <br />
+        <input type="password" name='adminPW' class="input_style" />
+        <button type="submit" class="sbm_button">로그인</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

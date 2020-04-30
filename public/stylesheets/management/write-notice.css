@@ -1,0 +1,53 @@
+ .write_notice-box{
+    width: 100%;
+}
+.write_notice-title-box{
+    padding-top: 20px;
+    width: 100%;
+}
+.write_notice-contents-box{
+   padding-top: 20px;
+    width: 100%;
+}
+.write_notice-title_input{
+    width: 100%;
+}
+.write_notice-contents{
+    width: 100%;
+    height: 400px;
+}
+.submit-box{
+  padding-top: 20px;
+  text-align: right;
+}
+.sbm-button{
+  width: 95px;
+  height: 46px;
+   font-size: 18px;
+  color: white;
+  font-weight: bold;
+  background-color:#0066FF ;
+  border: none;
+ 
+  border-radius:25px ;
+}
+
+/* Set dropdown font-families */
+#toolbar-container .ql-font span[data-label="KoPubWorld돋음체"]::before {
+  font-family: "KoPubWorld돋음체";
+}
+#toolbar-container .ql-font span[data-label="KoPubWorld바탕체"]::before {
+  font-family: "KoPubWorld바탕체";
+}
+
+
+
+/* Set content font-families */
+.ql-font-KoPubWorld돋음체 {
+  font-family: "KoPubWorld돋음체";
+}
+.ql-font-KoPubWorld바탕체 {
+  font-family: "KoPubWorld바탕체";
+}
+
+/* We do not set Aref Ruqaa since it is the default font */

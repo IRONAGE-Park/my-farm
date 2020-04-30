@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'KoPub World Dotum';
+  font-style: normal;
+  font-weight: 400;
+  
+  src: local('KoPub World Dotum'), local('KoPubWorldDotum'), url('./fonts/KoPubWorld\ Dotum\ Bold.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'KoPub World Dotum';
+  word-break: keep-all;
+}
+
+.main {
+  padding-top: 100px;
+}
+.content {
+  padding: 50px 0;
+}

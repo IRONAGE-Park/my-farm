@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="인바이즈,다이얼 키패드 키패드, 다이얼 ,편집 컨트롤러,INVAIZ,Dial Keypad" />
+    <meta name="Author" content="인바이즈, INVAIZ" />
+    <meta name="Keywords" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
+    <meta name="Subject" content="인바이즈, INVAIZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="인바이즈, INVAIZ" />
+    <meta property="og:description" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="http://invaiz.com" />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/menu.css" />
+    <!-- <link rel="stylesheet" href="stylesheets/media.css" /> -->
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/notice_content.css">
+
+
+    <!-- <link rel="stylesheet" href="stylesheets/fadein.css"> -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/home.js"></script>
+    <script type="text/javascript" src="/javascripts/mobile.js"></script>
+    <title>INVAIZ</title>
+</head>
+
+<body>
+    <%- include('../header') %>
+    <div class="invaiz_support_notice_contents_container">
+        <div class="invaiz_support_notice_contents_box">
+            <div class="invaiz_support_path_box">
+                <ul class='invaiz_support_path_nav'>
+                    <li class='invaiz_support_path_list'>
+                        <a href="#">인바이즈 지원</a>
+                    </li>
+                    <li class='invaiz_support_path_list'>
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li class='invaiz_support_path_list'>
+                        <a href="#">공지내용</a>
+                    </li>
+                    <li class='invaiz_support_path_list'>
+                        <a href="#"><%=contents[idx-1].title%></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="invaiz_notice_contents_box">
+                <% var length=contents.length;
+                   console.log(typeof length)
+                   console.log(typeof idx)
+                %>
+                <p class='invaiz_notice_contents_title'><%=contents[idx-1].title%></p>
+                <div class="invaiz_profile_box">
+                    <img src="/images/invaiz_circle_logo.svg" class='circle_logo_position' alt="">
+                    <ul class='invaiz_profile_nav'>
+                        <li>INVAIZ</li>
+                        <li>관리자</li>
+                    </ul>
+                </div>
+                <div class="invaiz_notice_content">
+                    <%-contents[idx-1].content%>
+                </div>
+            </div>
+            <div class="invaiz_page_next_prev_box">
+                <div class="invaiz_page_prev">
+                    <div class="invaiz_PrevIcon_box">
+                        <a href="../notice_content/<%=idx-1%>"> <img src="/images/page_prev_icon.svg" alt="">이전글</a>
+                    </div>
+
+                    <div class="invaiz_prev_contents">
+                        <% if(idx-2 <0){%>
+                        이전글이 없습니다
+                        <%} else {%>
+                        <%- contents[idx-1].title %>
+                        <%}%>
+                    </div>
+                    <div class="invaiz_prev_CreatedDate">
+                        <% if(idx-2 <0){%>
+                        이전글이 없습니다
+                        <%} else {
+                             var data = new Date(contents[idx-1].CreatedDate)
+                             var date=`${data.getFullYear()}.${data.getMonth()+1}.${data.getDate()}` %>
+                        <%- date %>
+                        <%}%>
+                    </div>
+                </div>
+                <div class="invaiz_page_next">
+                    <div class="invaiz_NextIcon_box">
+                        <a href="../notice_content/<%=idx+1%>"> <img src="/images/page_next_icon.svg" alt="">다음글</a>
+                    </div>
+                    <div class="invaiz_next_contents">
+                        <% if(idx+1 > contents.length){%>
+                        다음글이 없습니다
+                        <%} else {%>
+                        <%- contents[idx].title %>
+                        <%}%>
+                    </div>
+                    <div class="invaiz_next_CreatedDate">
+                        <% if(idx+1 > contents.length){%>
+                        다음글이 없습니다
+                        <%} else {          
+                         var data = new Date(contents[idx].CreatedDate)
+                         var date=`${data.getFullYear()}.${data.getMonth()+1}.${data.getDate()}` %>
+                        <%- date %>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <%- include('../footer') %>
+                        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

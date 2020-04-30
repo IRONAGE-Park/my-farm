@@ -1,0 +1,20 @@
+/*테이블 위쪽 설명 부분*/
+.section-contents{
+    margin: 0 auto;
+    width: 913px;
+    height: calc(100vh - 100px);
+}
+.section-contents_title{
+    padding: 30px 0 30px  0;
+}
+
+.section-contents_hr_light{
+    border: 2px solid black;
+}
+.section-contents_summary{
+    padding-top: 13px;
+}
+
+
+
+

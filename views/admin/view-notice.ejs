@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/management/layout.css">
+    <link rel="stylesheet" href="/stylesheets/management/manage-common.css">
+    <link rel="stylesheet" href="/stylesheets/management/write-notice.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav-box">
+            <div class="nav_logo-box">
+                <a href="/admin/main" class='nav_logo'> <img src="/images/management/logo_white.svg" alt="로고에러" /></a>
+            </div>
+            <div class="nav-contents">
+                <div class="nav-contents_title">
+                    페이지 관리
+                </div>
+                <ul class="nav-contents_list">
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="/admin/notice">공지사항 관리</a>
+                    </li>
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">커뮤니티 관리</a></li>
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">다운로드 관리</a></li>
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">반품/환불 관리</a></li>
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">FAQ/문의하기 관리</a></li>
+                </ul>
+                <div class="nav-contents_title">
+                    포스트 관리
+                </div>
+                <ul class="nav-contents_list">
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">홈관리</a></li>
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">제품 관리</a></li>
+                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">예약 관리</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="section">
+            <div class="section_title">
+                INVAIZ 관리자님 환영합니다
+            </div>
+            <div class="section-contents">
+                <h1 class='section-contents_title'>공지사항 관리</h1>
+                <hr class='section-contents_hr_light'>
+                <h2 class='section-contents_summary'>INVAIZ 공지사항 수정 페이지</h2>
+                <div class="write_notice-box">
+                    <div class="write_notice-title-box">
+                        <form action="/admin/notice-update" method="POST">
+                            <h3>제목</h3>
+                            <input type="text" class='write_notice-title_input' name='notice_title'
+                                value='<%= notice_content[0].title %>'>
+
+                    </div>
+                    <div class="write_notice-contents-box">
+                        <h3> 내용</h3>
+                        <div class="write_notice-contents">
+                            <div id="toolbarJS">
+                                <span class="ql-formats">
+                                    <select class='ql-font' style='width: 150px;'>
+                                        <option value='KoPubWorld돋음체'>KoPubWorld돋음체</option>
+                                        <option value='KoPubWorld바탕체'>KoPubWorld바탕체</option>
+                                    </select>
+                                    <select class="ql-header">
+                                        <option value="1"></option>
+                                        <option value="2"></option>
+                                        <option value="3"></option>
+                                        <option value="4"></option>
+                                        <option value='5'></option>
+                                        <option value='6'></option>
+                                    </select>
+                                    <select class="ql-size">
+                                        <option value='small'></option>
+                                        <option value="normal"></option>
+                                        <option value="large"></option>
+                                        <option value="huge"></option>
+                                    </select>
+                                    <select class="ql-color ">
+                                        <!--<option value="rgb(0, 0, 0)" /> 나중에 추가-->
+                                    </select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button>
+                                    <button class="ql-strike"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-list" value="ordered"></button>
+                                    <button class="ql-list" value='bullet'></button>
+                                    <button class="ql-indent" value="-1"></button>
+                                    <button class="ql-indent" value="+1"></button>
+                                    <button class="ql-direction" value="rtl"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-align" value='justify'></button>
+                                    <button class="ql-align" value='center'></button>
+                                    <button class="ql-align" value='right'></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-link"></button>
+                                    <button class="ql-image"></button>
+                                </span>
+                            </div>
+                            <div id="quillJS">
+                                <%- notice_content[0].content %>
+                            </div>
+                            <div class="submit-box">
+                                <input type="hidden" class='hidden-JS' name='notice_contents' value=''>
+                                <button type="submit" class='sbm-button'>수정</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+        <script src="/javascripts/editor.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

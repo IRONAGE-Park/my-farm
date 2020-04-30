@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: KoPubWorld돋움체;
+}
+/*헤더 css*/
+.header-box {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+.header-box img {
+  margin-left: 80px;
+}
+
+.login-box {
+  width: 457px;
+  height: 436px;
+  margin: 150px auto;
+}
+
+/*로그인 폼 css*/
+.login-title_box {
+  width: 100%;
+  height: 80px;
+  font-size: 42.5px;
+  border-bottom: 2px solid black;
+}
+.login-content_box {
+  margin-top: 50px;
+  width: 100%;
+}
+.input_style {
+  font-size: 18.5px;
+  font-weight: bold;
+  border: 2px solid black;
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin:10px 0 10px 0;
+}
+.sbm_button {
+  width: 100%;
+  height: 46px;
+  border: none;
+  background-color: #0066ff;
+  color: white;
+}
