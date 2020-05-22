@@ -1,6 +1,15 @@
 // ================================
 // START YOUR APP HERE
 // ================================
+const example = {
+  "2020.05.07": {
+    title: "등록되었습니다.",
+    content: "<p>gggg</p>"
+  }
+}
+
+
+
 const init = {
   monList: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
   dayList: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
@@ -78,7 +87,8 @@ function loadYYMM(fullDate) {
       } else {
         let fullDate = yy + '.' + init.addZero(mm + 1) + '.' + init.addZero(countDay + 1);
         trtd += '<td class="day';
-        trtd += (markToday && markToday === countDay + 1) ? ' today" ' : '"';
+        trtd += (markToday && markToday === countDay + 1) ? ' today ' : '';
+        trtd += example[fullDate] ? ' save"' : '"';
         trtd += ` data-date="${countDay + 1}" data-fdate="${fullDate}">`;
       }
       trtd += (startCount) ? ++countDay : '';
@@ -121,6 +131,7 @@ $btnPrev.addEventListener('click', () => loadYYMM(init.prevMonth()));
 
 $calBody.addEventListener('click', (e) => {
   if (e.target.classList.contains('day')) {
+    document.querySelector('.hidden-Date').value = e.target.dataset.fdate;
     if (init.activeDTag) {
       init.activeDTag.classList.remove('day-active');
     }
@@ -129,6 +140,41 @@ $calBody.addEventListener('click', (e) => {
     e.target.classList.add('day-active');
     init.activeDTag = e.target;
     init.activeDate.setDate(day);
-    reloadTodo();
+    // reloadTodo();
+
+    if( example[e.target.dataset.fdate] ) {
+      document.querySelector('#title').value =  example[e.target.dataset.fdate].title
+      container.querySelector('.ql-editor').innerHTML = example[e.target.dataset.fdate].content
+    }
+    else {
+      document.querySelector('#title').value = ""
+      container.querySelector('.ql-editor').innerHTML = ""
+    }
   }
 });
+
+const container = document.querySelector('#quillJS')
+const options = {
+    modules: {
+        toolbar: '#toolbarJS',
+    },
+    placeholder: '일기를 작성하세요!',
+    theme: 'snow'
+}
+const editor = new Quill(container, options);
+
+
+let submitButton = document.querySelector('.sbm-button')
+let hidden = document.querySelector('.hidden-JS')
+
+submitButton.addEventListener('click', function (e) {
+  var data = editor.getContents();
+  hidden.value = JSON.stringify(editor.getContents());
+  var date = document.querySelector('.hidden-Date').value
+  example[date] = {
+    title: document.querySelector('#title').value,
+    content: hidden.value
+  };
+  loadYYMM(init.today);
+  e.preventDefault();
+})

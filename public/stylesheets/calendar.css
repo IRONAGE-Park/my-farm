@@ -36,7 +36,7 @@
 .ctr-box {
   padding: 0 16px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 30px;
 }
 .ctr-box .btn-cal {
   position: relative;
@@ -58,7 +58,7 @@
   height: 100%;
   line-height: 25px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
 }
 .ctr-box .btn-cal.next {
   float: right;
@@ -96,6 +96,11 @@
   border-radius: 50%;
   color: #fff;
 }
+.cal-table td.save {
+  background: #29c389;
+  border-radius: 50%;
+  color: #fff;
+}
 .cal-table td.has-event:after {
   content: '';
   display: block;
@@ -119,6 +124,7 @@
   box-sizing: border-box;
   float: left;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  overflow-y: auto;
 }
 
 #schedule-form input[type="text"],
