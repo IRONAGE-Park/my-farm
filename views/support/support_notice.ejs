@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="인바이즈,다이얼 키패드 키패드, 다이얼 ,편집 컨트롤러,INVAIZ,Dial Keypad" />
-  <meta name="Author" content="인바이즈, INVAIZ" />
-  <meta name="Keywords" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
-  <meta name="Subject" content="인바이즈, INVAIZ" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="인바이즈, INVAIZ" />
-  <meta property="og:description" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="http://invaiz.com" />
-  <link rel="stylesheet" href="/stylesheets/main.css" />
-  <link rel="stylesheet" href="/stylesheets/menu.css" />
-  <!-- <link rel="stylesheet" href="stylesheets/media.css" /> -->
-  <link rel="stylesheet" href="/stylesheets/header.css" />
-  <link rel="stylesheet" href="/stylesheets/support_header.css">
-  <link rel="stylesheet" href="/stylesheets/support.css">
-  <link rel="stylesheet" href="/stylesheets/footer.css">
-
-  <!-- <link rel="stylesheet" href="stylesheets/fadein.css"> -->
-  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/home.js"></script>
-  <script type="text/javascript" src="javascripts/mobile.js"></script>
-  <title>INVAIZ</title>
-</head>
-
-<body>
   <%- include('../header') %>
   <%- include('../support/support_header') %>
   <div class="invaiz_support_contents_container">
@@ -38,13 +6,13 @@
         <img src="images/notice_logo.svg" alt="">
       </div>
       <div class="invaiz_search_box">
-        <input type="text" placeholder="INVAIZ 다이얼 키패드 이용관련 검색">
+        <input type="text" placeholder="농장 이용관련 검색">
         <button>조회하기</button>
       </div>
       <div class="invaiz_support_path_box">
         <ul class='invaiz_support_path_nav'>
           <li class='invaiz_support_path_list'>
-            <a href="#">인바이즈 지원</a>
+            <a href="#">농장 지원</a>
           </li>
           <li class='invaiz_support_path_list'>
             <a href="#">공지사항</a>
@@ -104,18 +72,8 @@
           for(let page = 1 ; page<=cnt; page++ ){%>
           <a href="page=<%=page%>"><%= page %></a>
           <%}%>
-          <%# 
-          <a href="#"><img src="/images/double_left_cursor.svg" alt=""></a>
-          <a href="#"> <img src="/images/left_cursor.svg" alt=""></a>
-          <a href=""> <img src="/images/right_cursor.svg" alt=""></a>
-          <a href="#"><img src="/images/double_right_cursor.svg" alt=""></a>
-          %>
-
         </div>
       </div>
     </div>
   </div>
   <%- include('../footer') %>
-</body>
-
-</html>

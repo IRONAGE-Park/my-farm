@@ -21,7 +21,5 @@ let hidden = document.querySelector('.hidden-JS')
 
 submitButton.addEventListener('click', function () {
     var data = editor.getContents();
-    // console.log(data);
     hidden.value = JSON.stringify(editor.getContents());
-    // console.log(JSON.stringify(editor.getContents()));
 })

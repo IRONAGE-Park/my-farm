@@ -3,7 +3,7 @@
 // ================================
 const init = {
   monList: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  dayList: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  dayList: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
   today: new Date(),
   monForChange: new Date().getMonth(),
   activeDate: new Date(),
