@@ -9,6 +9,7 @@
   margin: 0 auto;
   position: relative;
   width: 80%;
+  max-width: 1374px;
   height: 100%;
 }
 .header-logo {

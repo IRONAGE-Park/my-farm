@@ -1,85 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'KoPub Dotum';
-}
-/* 섹션 시작 */
-.invaiz_section{
+.container {
+    width: 100%;
     height: 100vh;
+  }
+  
+  .banner_box {
+    padding-top: 100px;
+    width: 100%;
+    background-repeat: no-repeat;
     background-size: cover;
-}
-/* 섹션 전체 컨텐츠 */
-.invaiz_content{
-    height: 100vh;
-    position: relative;
-    margin : 0 auto;
-    padding : 0 auto;
-    /* border: 1px solid white; */
-}
-/* 제품 사진 */
-.keypad{
-    width: 30vw;
-    padding-top: 100px ;
-}
-.product{
-   width:600px;
-}
-.front{
-    width: 30vw;
-    /* width: 80vw; */
-}
-.software{
-    width: 60%;;
-}
-/* 섹션 제목 */
-.content_title{
-    position: relative;
-    font-size: 45px;
-    margin-bottom:50px ;
-}
-
-
-/* 섹션 내 박스 */
-.invaiz_content_item{
-    /* 모든 객체 가운데 정렬 */
-    max-width: 100%;
-    position: relative;
-    left:50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .product_box {
+    padding-top: 50px;
+    width: 1024px;
+    margin: 0 auto;
     text-align: center;
-    /* border: 1px solid red; */
-}
-.item_two{
-    text-align: right;
-}
-/* 제품 타이틀 */
-.content_product_title{
-    position: relative;
-    font-size: 75px;
-    margin-top:25px;
-    margin-bottom:25px;
-}
-.invaiz_product_subtitle{
-    font-size:17.5px;
-    line-height: 30px;
-}
-
-
-.section2{
-    background-image: url(../images/background2.png);
-    background-attachment: fixed;
-}
-.section3{
-    
-}
-.section4{
-    background-image: url(../images/productback.png);
-    background-attachment: fixed;
-}
-.section5{
-    background-color:white;
-}
-.section6{
-    background-color:#E7E7E7;
-}
+  }
+  
+  .banner-image {
+    width: 100%;
+  }
+  
+  .product-title_box {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .product-title-hr {
+    margin-top: 20px;
+  }
+  
+  /*제품 박스*/
+  .product-element {
+    width: 30%;
+    display: inline-block;
+    padding: 0 10px 50px 10px;
+  }
+  
+  .product-image {
+    width: 100%;
+    /* height: 100%; */
+  }
+  
+  .product-element-content {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .product_category {
+    padding-bottom: 50px;
+  }
+  
+  .footer {
+    border-top: 1px solid #707070;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 50px 0;
+  }

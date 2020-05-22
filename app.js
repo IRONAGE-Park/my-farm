@@ -6,7 +6,7 @@ var logger = require('morgan');
 var session = require('express-session');
 
 const indexRouter = require('./routes/index');
-const timelineRouter = require('./routes/timeline');
+const calendarRouter = require('./routes/calendar');
 const supportRouter = require('./routes/support');
 const adminRouter = require('./routes/admin');
 
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/timeline', timelineRouter);
+app.use('/calendar', calendarRouter);
 app.use('/support', supportRouter);
 app.use('/admin', adminRouter);
 
