@@ -1,0 +1,116 @@
+ .invaiz_support_notice_contents_container{
+     padding-top: 100px;
+     width: 100%;
+ }
+
+ /* layout size */
+ .invaiz_support_notice_contents_box{
+     margin: 0 auto;
+     width: 47.6%; /*914px*/
+ }
+.invaiz_support_path_box{
+     padding-top: 69px;
+     padding-bottom: 62px;
+     width: 100%;
+     height: 55px;
+     line-height: 55px;
+ } 
+ .invaiz_support_path_nav{
+     list-style: none; 
+ }
+ .invaiz_support_path_list{
+     display: inline-block;
+     height: 100%;
+ }
+ .invaiz_support_path_list a{
+     text-decoration: none;
+     color: black;
+ }
+ .invaiz_support_path_list ::after{
+     margin: 0 10px 0 10px;
+     content:url('../images/path_cursor.svg');
+ }
+ .invaiz_notice_contents_box{
+     width: 100%;
+     height: 445px;
+ }
+ .invaiz_notice_contents_title{
+     font-size: 42.5px;
+ }
+ .invaiz_profile_box{
+     margin-top: 17px;
+     position: relative;
+     width: 100%;
+     height: 50px;
+ }
+ .circle_logo_position{
+     position: absolute;
+ }
+ .invaiz_profile_nav{
+     top: 50%;
+     transform: translateY(-50%);
+     position: absolute;
+     list-style: none;
+     left: 60px;
+     height: 100%;
+     line-height: 26px;
+ }
+ .invaiz_profile_nav :nth-child(1){
+     color:#0066FF ;
+     font-size: 17.5px;
+ }
+  .invaiz_profile_nav :nth-child(2){
+      color: #707070;
+      font-size: 12.5px;
+  }
+  .invaiz_notice_content{
+      margin-top: 60px;
+      width: 914px;
+      height: 263px;
+  }
+
+  .invaiz_page_next_prev_box{
+      margin-top: 80px;
+      width: 100%;
+      height: 60px;
+      font-size: 15px;
+      color: black;
+      margin-bottom: 80px;
+  }
+  .invaiz_page_prev,.invaiz_page_next{
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+  }
+   .invaiz_page_prev{
+       border-bottom: 2px solid #707070;
+   }
+  .invaiz_page_prev div{
+      margin-right: -4px;
+  }
+  .invaiz_page_next div{
+      margin-right: -4px;
+  }
+  .invaiz_PrevIcon_box,.invaiz_NextIcon_box{
+      display: inline-block;
+      width: 20%;
+      height: 100%;
+  }
+  .invaiz_PrevIcon_box a,.invaiz_NextIcon_box a{
+      text-decoration: none;
+  }
+  .invaiz_PrevIcon_box img,.invaiz_NextIcon_box img{
+      transform: translateY(-25%);
+      padding-right: 5px;
+
+  }
+  .invaiz_prev_contents,.invaiz_next_contents{
+      display: inline-block;
+      width:55%;
+      height: 100%;
+  }
+  .invaiz_prev_CreatedDate,.invaiz_next_CreatedDate{
+      display: inline-block;
+      width: 25%;
+      height: 100%;
+  }

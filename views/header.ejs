@@ -14,30 +14,23 @@
   <meta property="og:description" content="인바이즈, INVAIZ, 다이얼 키패드, 키패드, 다이얼, 편집 컨트롤러, Dial Keypad" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="canonical" href="http://invaiz.com" />
-  <link rel="stylesheet" href="stylesheets/reset.css">
+  <!-- <link rel="canonical" href="http://invaiz.com" /> -->
   <link rel="stylesheet" href="stylesheets/main.css" />
   <link rel="stylesheet" href="stylesheets/menu.css" />
   <link rel="stylesheet" href="stylesheets/header.css" />
-  <link rel="stylesheet" href="stylesheets/index.css" />
-  <link rel="stylesheet" href="stylesheets/product.css" />
-  <link rel="stylesheet" href="stylesheets/footer.css">
-  <link rel="stylesheet" href="stylesheets/media.css" />
-
-  
-  <link rel="stylesheet" href="/stylesheets/notice_content.css">
-  <link rel="stylesheet" href="/stylesheets/support_header.css">
-  <link rel="stylesheet" href="/stylesheets/support.css">
-
-  <title>농장</title>
+  <link rel="stylesheet" href="stylesheets/footer.css" />
+  <title>합천 구기자 농장</title>
 </head>
-
 <body>
-  <div class="header-container">
-    <header class="header">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Header Logo -->
       <a href="/">
         <img src="images/logo.svg" alt="" class="header-logo" />
       </a>
+
+      <!-- Header Navigation Menu -->
       <div class="header-nav-box">
         <ul class="header-nav">
           <li class="header-nav-element">
@@ -54,18 +47,9 @@
           </li>
         </ul>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
   <script>
-    let header_container = document.querySelector(".header-container")
-    let header = document.querySelector(".header")
-    window.addEventListener("scroll", function () {
-      if (scrollY === 0) {
-        header_container.style.backgroundColor = "#ccc"
-        header_container.style.transition = "0.5s"
-      } else {
-        header_container.style.backgroundColor = "#29c389"
-        header_container.style.transition = "0.5s"
-      }
-    })
+    const header_container = document.querySelector(".header")
+    window.addEventListener("scroll", () => { if (scrollY === 0) { header_container.style.backgroundColor = "#ccc" } else { header_container.style.backgroundColor = "#29c389" } })
   </script>

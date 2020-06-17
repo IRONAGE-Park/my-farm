@@ -1,8 +1,64 @@
-<div class="content_footer">
-  <p>
-    INVAIZ INTERNATIONAL INDUSTRIES<br />
-    경상남도 합천군 율곡면 제내리 제내 4길 7-2<br />
-    사업자 번호 : 294-41-00495 대표 : 박명환<br />
-    ⓒ 2019 INVAIZ Co. all rights reserved
-  </p>
-</div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <!-- 사이트 문의 및 정보 영역 -->
+      <div class="footer-content content">
+        <div class="footer-section f-contact-us">
+          <div class="footer-section-title"><h5>사이트 이용문의</h5></div>
+          <div class="footer-content-box">
+            <p class="consulting-time"><strong>상담시간</strong> : 09:00 ~ 18:00</p>
+            <p class="tel-number">010.2506.3265</p>
+            <p class="closed-guide"><strong>휴일안내</strong> : 토 · 일 및 공휴일은 휴무</p>
+            <p class="contact-annotation">문의사항이 있으시면 위 번호로 연락주시기 바랍니다.</p>
+          </div>
+        </div>
+        <div class="footer-section f-information">
+          <div class="footer-section-title"><h5>사이트 정보</h5></div>
+          <div class="footer-content-box">
+            <p class=""><strong>합천 구기자 농장</strong><span class="info-divider">|</span>대표 : 박 명 환<span class="info-divider">|</span>사업자등록번호 : 294-41-00495</p>
+            <p>주소 : 경상남도 합천군 율곡면 제내리 제내 4길 7-2<span class="info-divider">|</span>Tel. 055-933-3265</p>
+          </div>
+          <div class="footer-content-box"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 공지사항 및 알림 배너 영역 -->
+    <div class="footer-notice container">
+      <div class="footer-notice-roll content">
+        <ul class="footer-notice-list">
+          <li class="footer-notice-element" data-set-id="notice1"><a href="#">공지사항</a></li>
+          <li class="footer-notice-element" data-set-id="notice2"><a href="#">테스트1</a></li>
+          <li class="footer-notice-element" data-set-id="notice3"><a href="#">테스트2</a></li>
+          <li class="footer-notice-element" data-set-id="notice1"><a href="#">공지사항</a></li>
+        </ul>
+        <div class="footer-notice-xs">
+          회사소개<span class="info-divider">|</span>개인정보처리방침<span class="info-divider">|</span>이메일무단수집거부
+        </div>
+      </div>
+    </div>
+    <!-- 최하단 카피라이팅 문구 -->
+    <div class="footer-bottom container">
+      <div class="footer-bottom content">
+        <div class="footer-bottom-left">합천 구기자 농장</div>
+        <div class="footer-bottom-right">Copyright © 합천구기자농장. All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const FooterNoticeList = document.querySelector('.footer-notice-list');
+    const FooterNoticeElements = FooterNoticeList.querySelectorAll('.footer-notice-element')
+    const ELEMENT_COUNT = FooterNoticeElements.length
+    let current_count = 0
+    setInterval(function () {
+      if (current_count == 0) {
+        FooterNoticeList.classList.add('no-animation')
+      } else {
+        FooterNoticeList.classList.remove('no-animation')
+      }
+      FooterNoticeList.style.top = -current_count * 22 + "px"
+      current_count = (current_count + 1) % ELEMENT_COUNT
+    }, 3000)
+  </script>
+</body>
+
+</html>

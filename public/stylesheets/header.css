@@ -1,11 +1,12 @@
-.header-container {
+.header {
   position: fixed;
   width: 100%;
   height: 100px;
   z-index: 1000;
   background-color: #ccc;
+  transition: background-color 0.5s;
 }
-.header {
+.header-container {
   margin: 0 auto;
   position: relative;
   width: 80%;

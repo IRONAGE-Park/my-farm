@@ -10,8 +10,8 @@ const { base64encode, base64decode } = require('nodejs-base64');
 var router = express.Router();
 
 var dboption = dbconfig;
-var connection = mysql.createConnection(dbconfig);
-connection.connect();
+// var connection = mysql.createConnection(dbconfig);
+// connection.connect();
 
 
 router.use(session({

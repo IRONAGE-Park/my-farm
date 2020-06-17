@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql');
 const dbconfig = require('./dbconfig');
 
 router.get('/', function (req, res, next) {

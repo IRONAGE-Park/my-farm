@@ -1,10 +1,86 @@
-/*FOOTER*/
-.content_footer {
-  text-align: center;
-  line-height: 24px;
-  font-size: 0.8rem;
-  clear: both;
-  padding-top: 50px;
-  padding-bottom: 50px;
+/* FOOTER */
+.footer {
   border-top: 1px solid black;
+  background-color: #1d2939;
+  color: #848a9f;
 }
+
+/* ----------사이트 문의 및 정보 영역---------- */
+.footer-content {overflow: hidden;}
+.footer-section {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.f-contact-us {width: 33.33333%;}
+.f-information {width: 66.66667%;}
+.footer-section-title {
+  font-size: 24px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #3D4254;
+  margin-bottom: 15px;
+}
+.footer-content-box {font-size: 12px;}
+.footer-content-box p {margin-bottom: 5px; }
+.tel-number {
+  font-size: 2.6em;
+  font-weight: bold;
+}
+.closed-guide, .contact-annotation { font-size: 0.9em; }
+.info-divider {margin: 0 5px;}
+
+/* ----------공지사항 및 알림 배너 영역---------- */
+.footer-notice {
+  position: relative;
+  font-size: 12px;
+  border-top: solid 1px #3D4254;
+  line-height: 22px;
+  padding: 15px 0;
+}
+.footer-notice-roll {
+  height: 22px;
+  overflow: hidden;
+}
+.footer-notice-roll::before {
+  content: "공지";
+  padding: 0 8px;
+  color: white;
+  position: absolute;
+  left: 0;
+  background-color: red;
+}
+.footer-notice-list {
+  list-style: none;
+  position: relative;
+  left: 65px;
+  transition: top 0.6s;
+}
+.footer-notice-list.no-animation {
+  transition: none;
+}
+.footer-notice-element a {
+  text-decoration: none;
+  color: #848a9f;
+}
+.footer-notice-xs {
+  position: absolute;
+  top: 0px; right: 0;
+}
+
+
+/* ----------최하단 카피라이팅 문구---------- */
+.footer-bottom {
+  background-color: #000;
+  padding: 5px 0;
+  font-size: 11px;
+}
+
+.footer-bottom-left {
+  position: absolute;
+  left: 0;
+}
+.footer-bottom-right {
+  text-align: right;
+}
+
+
