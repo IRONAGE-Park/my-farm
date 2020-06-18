@@ -1,4 +1,44 @@
-*{margin:0;padding: 0;}
-.brand{ background-color: black;color :white;  }
-.Brand_mainTitle{color:gray; margin-bottom: 50px; font-weight: lighter; font-size:27px;}
-.Brand_subTitle{font-weight: lighter;line-height: 34px; font-size:17.5px;}
+.branding-banner {
+    background-image: url(/images/branding/sub_visual1.jpg);
+}  
+.branding-title{
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+  .branding-nav{
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+  }
+  
+  .branding-nav ul{
+    font-size: 0;
+  }
+  .branding-nav li{
+    display: inline-block;
+    width: 25%;
+    height: 60px;
+    background-color: #cdc9c9;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+    transition: 0.5s;
+  }
+  .branding-nav li:hover, .branding-nav li.selected{
+    background-color: black;
+  }
+  .branding-nav li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 60px;
+  }
+
+  .branding-area {
+    padding: 50px 0;
+    margin: 50px 0;
+  }

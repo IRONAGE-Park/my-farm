@@ -1,22 +1,7 @@
+.product-banner {
+  background-image: url(/images/branding/sub_visual1.jpg);
+}
 
-  .banner_box {
-    padding-top: 100px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .product_box {
-    padding-top: 50px;
-    width: 1024px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .banner-image {
-    width: 100%;
-  }
-  
   .product-title_box {
     width: 100%;
     text-align: center;

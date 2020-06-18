@@ -4,7 +4,7 @@ const dbconfig = require('./dbconfig');
 
 router.get('/', function (req, res, next) {
     // 예약 페이지 렌
-    res.render('calendar/index');
+    res.render('diary/index');
 });
 
 module.exports = router;

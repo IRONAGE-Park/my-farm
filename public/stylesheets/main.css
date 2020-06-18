@@ -2,7 +2,6 @@
   font-family: 'KoPub World Dotum';
   font-style: normal;
   font-weight: 400;
-  
   src: local('KoPub World Dotum'), local('KoPubWorldDotum'), url('./fonts/KoPubWorld\ Dotum\ Bold.ttf') format('truetype');
 }
 
@@ -13,15 +12,31 @@
   word-break: keep-all;
 }
 
-.main {padding-top: 100px; }
+.main {
+  /* Main 영역은 Header의 크기에 간섭되지 않을 만큼 띄워주는 용도 */
+  padding-top: 100px;
+}
 .container {
+  /* container 영역은 내용이 너무 Header와 Footer에 달라 붙지 않게 하는 용도 */
+  /* 때에 따라 사용되지 않을 수 있음*/
   padding: 50px 0;
 }
 .content {
-  /* 실제 내용이 담기는 영역으로, 최대 범위인 1374px를 초과하지 않는다 */
+  /* 실제 내용이 담기는 영역으로, 최대 범위인 1374px를 초과하지 않음. */
   position: relative;
   width: 95%;
   max-width: 1374px;
   margin: 0 auto;
   overflow: hidden;
 }
+.banner {
+  /* banner는 페이지의 제목을 나타내기 위한 용도로, 이미지가 삽입됨. */
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  line-height: 250px;
+  font-size: 50px;
+  color: white;
+}  
