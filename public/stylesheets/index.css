@@ -31,17 +31,18 @@
   height: 100vh;
 }
 .title {
-  padding-top: 150px;
-  font-size: 60px;
+  padding-top: 30%;
+  font-size: 5em;
   font-weight: bold;
 }
 .sub-title {
   margin-top: 40px;
-  font-size: 40px;
+  font-size: 3.5em;
 }
 .text {
   margin-top: 40px;
-  font-size: 20px;
+  margin-bottom: 100px;
+  font-size: 1.4em;
 }
 .introduce a,
 .service a {
@@ -51,23 +52,24 @@
   -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
   display: block;
-  margin: 20px auto;
   max-width: 180px;
   text-decoration: none;
   border-radius: 4px;
   padding: 20px 30px;
   font-weight: bold;
 }
-
+.introduce a {margin: 20px auto;}
 a.button {
-  color: red;
-  box-shadow: red 0 0px 0px 2px inset;
+  color: #29c389;
+  font-size: 1.5em;
+  box-shadow: #29c389 0 0px 0px 2px inset;
 }
-
 a.button:hover {
   color: white;
-  box-shadow: red 0 0px 0px 40px inset;
+  box-shadow: #29c389 0 0px 0px 40px inset;
 }
+.service a.button {color:salmon;box-shadow: salmon 0 0px 0px 2px inset;}
+.service a.button:hover {color:#fff;box-shadow: salmon 0 0px 0px 40px inset;}
 
 .introduce .title {
   text-align: center;
@@ -82,7 +84,6 @@ a.button:hover {
 .introduce .text {
   text-align: center;
   color: orange;
-  margin-bottom: 100px;
 }
 
 .process-container {
@@ -102,7 +103,7 @@ a.button:hover {
 }
 
 .process-table {
-  font-size: 40px;
+  font-size: 3.5em;
   margin-top: 40px;
   text-align: center;
   color: darkcyan;
@@ -114,7 +115,7 @@ a.button:hover {
   padding: 0;
 }
 .table-icon img {
-  width: 300px;
+  width: 100%;
 }
 .service-img {
   position: relative;

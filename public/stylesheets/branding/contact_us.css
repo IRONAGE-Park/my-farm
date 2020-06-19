@@ -5,7 +5,7 @@
 }
 
 .contact-us-location {
-    height: 450px;
+    overflow: hidden;
 }
 .contact-us-location-box {
     width: 50%;
@@ -15,7 +15,9 @@
 }
 .contact-us-paint-map {
     background-color: #cdc9c9;
+    height: 450px;
 }
+.contact-us-paint-map img {width: 100%; height: 100%;}
 
 .contact-us-location-text {
     box-sizing: border-box;
@@ -26,18 +28,26 @@
 }
 .contact-us-location-title {
     display: block;
-    font-size: 36px;
+    font-size: 3em;
     font-weight: bold;
     margin-bottom: 15px;
 }
 .contact-us-location-content {
-    font-size: 16px;
+    font-size: 1.4em;
     margin-bottom: 5px;
+    color: #777;
 }
 
 .contact-us-location-logo {
     /* height: 196px; */
     background-color: #333;
+}
+
+@media (max-width: 1024px) {
+    .contact-us-location-box {
+        float: none;
+        width: 100%;
+    }
 }
 
 /* KAKAO MAP API */

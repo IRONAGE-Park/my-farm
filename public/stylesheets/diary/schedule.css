@@ -24,7 +24,7 @@
   
   #schedule-form h3 {
     display: block;
-    font-size: 30px;
+    font-size: 2.5em;
     font-weight: 300;
     margin-bottom: 10px;
   }
@@ -32,7 +32,7 @@
   #schedule-form h4 {
     margin: 5px 0 15px;
     display: block;
-    font-size: 13px;
+    font-size: 1.1em;
     font-weight: 400;
   }
   
@@ -75,7 +75,7 @@
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 1.32em;
   }
   #schedule-form button[type="submit"]:hover {
     background: #43A047;

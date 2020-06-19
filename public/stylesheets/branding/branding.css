@@ -2,10 +2,10 @@
     background-image: url(/images/branding/sub_visual1.jpg);
 }  
 .branding-title{
-    margin-top: 80px;
+    margin-top: 30px;
     width: 100%;
     text-align: center;
-    font-size: 48px;
+    font-size: 4em;
     font-weight: bold;
 }
   .branding-nav{
@@ -20,7 +20,7 @@
   .branding-nav li{
     display: inline-block;
     width: 25%;
-    height: 60px;
+    height: 50px;
     background-color: #cdc9c9;
     border-right: 1px solid white;
     box-sizing: border-box;
@@ -35,10 +35,15 @@
     display: block;
     width: 100%;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 50px;
   }
 
   .branding-area {
     padding: 50px 0;
     margin: 50px 0;
   }
+
+
+
+.float-left {float:left;}
+.float-right {float:right;}

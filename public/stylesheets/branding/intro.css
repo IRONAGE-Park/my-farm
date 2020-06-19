@@ -20,22 +20,15 @@
     float: right;
   }
   
-  .introduce-img-left{
-    float: left;
-  }
-  
-  .introduce-img-right{
-    float: right;
-  }
-  
   .introduce-sub_title{
-    font-size: 30px;
+    font-size: 2.5em;
     font-weight: bold;
   }
   
   .introduce-content{
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 1.8em;
+    color: #777;
   }
   
   .intro-conclusion{
@@ -44,10 +37,22 @@
   }
   
   .conclusion-text{
-    font-size: 20px;
+    font-size: 1.4em;
     font-weight: bold;
   }
   
   .conclusion-logo{
     margin-top: 50px;
   }
+@media (max-width: 768px) {
+  .introduce-img img {
+    width: 100%;
+  }
+  .introduce-wrap {
+    margin-bottom: 100px;
+  }
+  .introduce-wrap > div {
+    float: none;
+    top: 0;
+  }
+}

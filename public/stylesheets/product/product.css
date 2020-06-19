@@ -2,25 +2,56 @@
   background-image: url(/images/branding/sub_visual1.jpg);
 }
 
-  .product-title_box {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    padding-bottom: 50px;
-  }
-  
-  .product-title-hr {
-    margin-top: 20px;
-  }
-  
+/* 상단 제품 목록 영역 */
+.product-title{
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+}
+.product-nav{
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+}
+.product-nav ul{
+  font-size: 0;
+}
+.product-nav li{
+  display: inline-block;
+  width: 25%;
+  height: 50px;
+  background-color: #cdc9c9;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.product-nav li:hover, .product-nav li.selected{
+  background-color: black;
+}
+.product-nav li a{
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+
+.product-area {
+  padding: 50px 0;
+  margin: 50px 0;
+  overflow: hidden;
+}
   /*제품 박스*/
   .product-element {
-    width: 30%;
-    display: inline-block;
-    padding: 0 10px 50px 10px;
+    width: 25%;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 0 50px 0;
   }
-  
   .product-image {
     width: 100%;
     /* height: 100%; */
@@ -29,9 +60,5 @@
   .product-element-content {
     text-align: center;
     width: 100%;
-    font-size: 14px;
-  }
-  
-  .product_category {
-    padding-bottom: 50px;
+    font-size: 1.2em;
   }

@@ -1,0 +1,51 @@
+.vision-logo-box {
+    height: 300px;
+    background-color: #ddd;
+}
+.vision-logo {
+    width: 50%;
+    height: 300px;
+    float: left;
+}
+.vision-content-box {
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.vision-image-box {
+    width:30%;
+    text-align: center;
+    float: left;
+}
+.vision-plus {
+    width:5%;
+    text-align: center;
+    float: left;
+}
+.vision-plus img {
+    width: 40px; height: 40px;
+    margin: 40px 0;
+}
+.vision-image img {width: 125px; height: 125px;}
+.vision-title {
+    display: block;
+    padding: 30px 0 20px 0;
+    font-size: 3em;
+}
+.vision-text {
+    padding: 15px 0;
+    font-size: 2em;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .vision-logo {
+        width: 100%;
+        height: 250px;
+    }
+
+    .vision-image-box, .vision-plus {
+        float: none;
+        width: 100%
+    }
+  }

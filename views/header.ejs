@@ -51,5 +51,7 @@
   </header>
   <script>
     const header_container = document.querySelector(".header")
-    window.addEventListener("scroll", () => { if (scrollY === 0) { header_container.style.backgroundColor = "#ccc" } else { header_container.style.backgroundColor = "#29c389" } })
+    window.addEventListener("scroll", () => {
+      if (scrollY === 0) { header_container.classList.remove('drop') }
+      else { header_container.classList.add('drop') } })
   </script>

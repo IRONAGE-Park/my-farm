@@ -27,16 +27,16 @@
 }
  
 .clicked-date .cal-day {
-  font-size: 24px;
+  font-size: 2em;
 }
 .clicked-date .cal-date {
-  font-size: 130px;
+  font-size: 15em;
 }
 
 .ctr-box {
   padding: 16px;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 2.5em;
 }
 .ctr-box .btn-cal {
   position: relative;
@@ -44,7 +44,7 @@
   width: 25px;
   height: 25px;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 1.4em;
   cursor: pointer;
   border: none;
   background: none;
@@ -58,7 +58,6 @@
   height: 100%;
   line-height: 25px;
   font-weight: bold;
-  font-size: 30px;
 }
 .ctr-box .btn-cal.next {
   float: right;
@@ -73,13 +72,13 @@
 .cal-table th {
   width: 14.2857%;
   padding-bottom: 5px;
-  font-size: 16px;
+  font-size: 1.4em;
   font-weight: 900;
 }
 .cal-table td {
   padding: 3px 0;
   height: 50px;
-  font-size: 15px;
+  font-size: 1.32em;
   vertical-align: middle;
 }
 .cal-table td.day {
