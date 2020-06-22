@@ -1,17 +1,16 @@
-var express = require("express");
-var mysql = require("mysql");
-var session = require('express-session');
-var MySQLStore = require('express-mysql-session')(session);
-var crypto = require('crypto');
+const express = require("express");
+const mysql = require("mysql");
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
+const crypto = require('crypto');
 const dbconfig = require("./dbconfig");
-var fs = require('fs');
 const { convertDeltaToHtml } = require('node-quill-converter');
 const { base64encode, base64decode } = require('nodejs-base64');
-var router = express.Router();
+const router = express.Router();
 
-var dboption = dbconfig;
-// var connection = mysql.createConnection(dbconfig);
-// connection.connect();
+const dboption = dbconfig;
+const connection = mysql.createConnection(dbconfig);
+connection.connect();
 
 
 router.use(session({
@@ -43,21 +42,20 @@ router.get('/', function (req, res) {
     res.render('admin/index');
 })
 
-
 router.post('/login', function (req, res) {
-    var id = req.body.adminID;
-    var pw = req.body.adminPW;
+    const id = req.body.adminID;
+    const pw = req.body.adminPW;
     console.log(id, pw);
     if (id === '' || pw === '') {
         res.send('<script>alert("아이디 또는 패스워드를 확인해주세요");history.go(-1);</script>')
     }
     else {
-        var query = `SELECT * FROM admin WHERE id=?`;
+        const query = `SELECT * FROM admin WHERE id=?`;
         connection.query(query, [id], function (err, result) {
             if (result[0] === undefined)
                 res.send('<script>alert("아이디 또는 패스워드를 확인해주세요");history.go(-1);</script>')
             else {
-                var admin = result[0];
+                const admin = result[0];
                 console.log(admin.id, admin.password);
 
                 crypto.pbkdf2(pw, admin.salt, 100000, 64, 'sha512', (err1, key) => {
@@ -76,26 +74,6 @@ router.post('/login', function (req, res) {
             }
         })
     }
-
-
-
-    // crypto.randomBytes(64, (err, buf) => {
-    //     if (err) throw err;
-    //     let salt = buf.toString('base64'); //salt 생성
-    //     console.log('salt :', salt);
-    //     connection.query(`UPDATE admin SET salt=? WHERE id=?`, [salt, 'admin'], function (err) {
-    //         if (err) throw err;
-    //         console.log('hash update');
-    //     })
-    //     // db에 저장된 패스워드와 생성한 salt를 합쳐서 해싱
-    //     crypto.pbkdf2(admin.password, salt, 100000, 64, 'sha512', (err1, key) => {
-    //         console.log(key.toString('base64'));
-    //         connection.query(`UPDATE admin SET password=? WHERE id=?`, [key.toString('base64'), 'admin'], function (err) {
-    //             if (err) throw err;
-    //             console.log('hash complete');
-    //         })
-    //     })
-    // })
 })
 
 

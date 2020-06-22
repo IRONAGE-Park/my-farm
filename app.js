@@ -7,6 +7,7 @@ var session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const diaryRouter = require('./routes/diary');
+const timelineRouter = require('./routes/timeline');
 const supportRouter = require('./routes/support');
 const adminRouter = require('./routes/admin');
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/diary', diaryRouter);
+app.use('/timeline', timelineRouter);
 app.use('/support', supportRouter);
 app.use('/admin', adminRouter);
 

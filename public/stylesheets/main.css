@@ -24,7 +24,7 @@ html, body {
 }
 .container {
   /* container 영역은 내용이 너무 Header와 Footer에 달라 붙지 않게 하는 용도 */
-  /* 때에 따라 사용되지 않을 수 있음*/
+  /* 때에 따라 사용되지 않을 수 있음 */
   padding: 50px 0;
 }
 .content {
@@ -45,6 +45,7 @@ html, body {
   line-height: 350px;
   font-size: 50px;
   color: white;
+  background-image: url(/images/branding/sub_visual1.jpg);
 }
 
 

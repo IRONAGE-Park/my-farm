@@ -1,10 +1,10 @@
 .vision-logo-box {
-    height: 300px;
+    height: 400px;
     background-color: #ddd;
 }
 .vision-logo {
     width: 50%;
-    height: 300px;
+    height: 100%;
     float: left;
 }
 .vision-content-box {

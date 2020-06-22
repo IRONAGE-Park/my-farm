@@ -68,6 +68,7 @@
 
 .cal-table {
   width: 100%;
+  font-weight: 100;
 }
 .cal-table th {
   width: 14.2857%;
@@ -85,21 +86,42 @@
   position: relative;
   cursor: pointer;
 }
-.cal-table td.today {
+.cal-table td.day::before {
+  content: '';
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  max-width: 0; max-height: 0;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: max-width, max-height .3s;
+}
+.cal-table td.day:hover::before {
+  border: solid 2px #29c389;
+  max-width: 40px; max-height: 40px;
+}
+.cal-table td.today::before {
   background: #ffd255;
-  border-radius: 50%;
-  color: #fff;
+  max-width: 40px; max-height: 40px;
 }
-.cal-table td.day-active {
+.cal-table td.day-active::before {
   background: #ff8585;
-  border-radius: 50%;
-  color: #fff;
+  max-width: 40px; max-height: 40px;
 }
-.cal-table td.save {
+.cal-table td.save::before {
   background: #29c389;
-  border-radius: 50%;
-  color: #fff;
+  max-width: 40px; max-height: 40px;
 }
+.cal-table td.save::after {
+  content: '';
+  position: absolute;
+  left: 0;right: 0; bottom: 15px;
+  margin: auto;
+  border-radius: 50%;
+  width: 3px; height: 3px;
+  background-color: #fff;
+}
+
 .cal-table td.has-event:after {
   content: '';
   display: block;

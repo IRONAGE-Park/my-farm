@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "node ./bin/www",
     "start": "pm2 start  ./bin/www --name invaiz",
     "stop": "pm2 stop invaiz",
     "delete": "pm2 delete invaiz"
@@ -20,7 +21,7 @@
     "http-errors": "~1.6.3",
     "mongoose": "^5.6.11",
     "morgan": "~1.9.1",
-    "mysql": "2.17.1",
+    "mysql": "^2.18.1",
     "node-quill-converter": "^0.3.3",
     "nodejs-base64": "^1.0.3",
     "passport-kakao": "^1.0.0",

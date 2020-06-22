@@ -9,7 +9,8 @@ const example = {
 }
 
 const init = {
-  monList: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  monEnglishList: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  monKoreanList: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
   dayList: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
   today: new Date(),
   monForChange: new Date().getMonth(),
@@ -68,8 +69,8 @@ function loadYYMM(fullDate) {
     markToday = init.today.getDate();
   }
 
-  document.querySelector('.cal-month').textContent = init.monList[mm];
-  document.querySelector('.cal-year').textContent = yy;
+  document.querySelector('.cal-month').textContent = init.monKoreanList[mm];
+  document.querySelector('.cal-year').textContent = yy + '년';
 
   let trtd = '';
   let startCount;

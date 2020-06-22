@@ -1,79 +1,80 @@
-  <%- include('../header') %>
-  <%- include('../support/support_header') %>
-  <div class="invaiz_support_contents_container">
-    <div class="invaiz_support_contents_box">
-      <div class="invaiz_support_logo_box">
+<%- include('../header') %>
+<!-- HEADER -->
+
+<!-- SUPPORT/NOTICE LIST MAIN PAGE -->
+<link rel="stylesheet" href="/stylesheets/support/support.css">
+<div class="support-banner banner">SUPPORT</div>
+<div class="main">
+  <div class="support_contents_container container">
+    <div class="support_contents_box content">
+      <div class="support_logo_box">
         <img src="images/notice_logo.svg" alt="">
       </div>
-      <div class="invaiz_search_box">
+      <div class="search_box">
         <input type="text" placeholder="농장 이용관련 검색">
         <button>조회하기</button>
       </div>
-      <div class="invaiz_support_path_box">
-        <ul class='invaiz_support_path_nav'>
-          <li class='invaiz_support_path_list'>
+      <div class="support_path_box">
+        <ul class='support_path_nav'>
+          <li class='support_path_list'>
             <a href="#">농장 지원</a>
           </li>
-          <li class='invaiz_support_path_list'>
+          <li class='support_path_list'>
             <a href="#">공지사항</a>
           </li>
-
         </ul>
       </div>
-      <!-- <div class="invaiz_support_title_box">
-        <h2>공지사항</h2>
-      </div> -->
-      <div class="invaiz_support_notice_box">
-        <table id='invaiz_support_notice_table'>
+      <div class="support_notice_box">
+        <table id='support_notice_table'>
           <tr>
-            <th class='invaiz_table_header_border invaiz_table_ColNumber_style'>NO</th>
-            <th class='invaiz_table_header_border invaiz_table_Title_style'>제목</th>
-            <th class='invaiz_table_header_border invaiz_table_CreatedDate_style'>작성일</th>
-            <th class='invaiz_table_header_border invaiz_table_ViewCount_style'>조회수</th>
+            <th class='table_header_border table_ColNumber_style'>NO</th>
+            <th class='table_header_border table_Title_style'>제목</th>
+            <th class='table_header_border table_CreatedDate_style'>작성일</th>
+            <th class='table_header_border table_ViewCount_style'>조회수</th>
           </tr>
-          <%
-          let i = 1;
-          console.log(contents.length)
-          for( ;i<=contents.length;i++){%>
+          <%let i = 1;for( ;i<=contents.length;i++){%>
           <tr>
-            <td class='invaiz_table_contents_border  invaiz_table_ColNumber_style'>
+            <td class='table_contents_border  table_ColNumber_style'>
               <%= contents[i-1].idx %> </td>
-            <td class='invaiz_table_contents_border invaiz_table_Title_style'>
-              <a href="notice_content/<%=contents[i-1].idx %>"><%= contents[i-1].title %></a>
+            <td class='table_contents_border table_Title_style'>
+              <a href="./support/notice_content/<%=contents[i-1].idx %>"><%= contents[i-1].title %></a>
             </td>
             </td>
-            <td class="invaiz_table_contents_border  invaiz_table_CreatedDate_style">
+            <td class="table_contents_border  table_CreatedDate_style">
               <%
-              var data = new Date(contents[i-1].createdate)
-              var date=`${data.getFullYear()}.${data.getMonth()+1}.${data.getDate()}`
-              %>
+                var data = new Date(contents[i-1].createdate)
+                var date=`${data.getFullYear()}.${data.getMonth()+1}.${data.getDate()}`
+                %>
               <%= date %></td>
             </td>
-            <td class="invaiz_table_contents_border  invaiz_table_ViewCount_style">
+            <td class="table_contents_border  table_ViewCount_style">
               <%= contents[i-1].viewcount %>
             </td>
           </tr>
           <% }%>
         </table>
-        <div class="invaiz_table_page">
+        <div class="table_page">
           <%  let cnt = 0;
-           if(AllRows.length <=10) { %>
+            if(AllRows.length <=10) { %>
           <a href="page=<%=1%>">1</a>
           <%} else {  
-            if(AllRows.length% 10 === 0 ){
-              cnt = AllRows.length / 10;
+              if(AllRows.length% 10 === 0 ){
+                cnt = AllRows.length / 10;
 
-            }
-            else {
-              cnt = (AllRows.length / 10) +1 ;
-            }
+              }
+              else {
+                cnt = (AllRows.length / 10) +1 ;
+              }
           }%>
-          <%
-          for(let page = 1 ; page<=cnt; page++ ){%>
-          <a href="page=<%=page%>"><%= page %></a>
+          <%for(let page = 1 ; page<=cnt; page++ ){%>
+            <a href="page=<%=page%>"><%= page %></a>
           <%}%>
         </div>
       </div>
     </div>
   </div>
-  <%- include('../footer') %>
+</div>
+<!-- SUPPORT/NOTICE LIST MAIN PAGE -->
+
+<%- include('../footer') %>
+<!-- FOOTER -->
