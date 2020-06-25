@@ -27,7 +27,7 @@
     <div class="header-container">
       <!-- Header Logo -->
       <a href="/">
-        <img src="images/logo.svg" alt="" class="header-logo" />
+        <img src="/images/logo.svg" alt="" class="header-logo" />
       </a>
 
       <!-- Header Navigation Menu -->
@@ -48,6 +48,54 @@
         </ul>
       </div>
     </div>
+    <!-- Mobile Header Sidebar -->
+    <div class="mobile header-sidebar">
+      <div class="sidebar-hamburger">
+        <svg class="ham hamRotate hamburger" viewBox="0 0 100 100"
+          onclick="this.classList.toggle('active');document.querySelector('.header-sidebar').classList.toggle('active')">
+          <path
+                class="line top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+          <path
+                class="line middle"
+                d="m 30,50 h 40" />
+          <path
+                class="line bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+      </div>
+      <div class="sidebar-content">
+        <div class="sidebar-intro sidebar-area">
+          <div class="sidebar-title">Introduce.</div>
+          <img class="sidebar-logo" src="nn" alt="Logo" />
+        </div>
+        <div class="sidebar-menu sidebar-area">
+          <ul class="sidebar-menu-list">
+            <li class="sidebar-menu-element">
+              <a href="/branding"> <span>소개</span> </a>
+            </li>
+            <li class="sidebar-menu-element">
+              <a href="/product"> <span>상품</span> </a>
+            </li>
+            <li class="sidebar-menu-element">
+              <a href="/diary"> <span>일지</span> </a>
+            </li>
+            <li class="sidebar-menu-element">
+              <a href="/support"> <span>문의</span> </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-contact sidebar-area">
+          <div class="sidebar-title">Contact.</div>
+          <div class="sidebar-contact-info">
+            <p>경상남도 합천군 율곡면 제내 4길 7-2</p>
+            <p>Tel. 055-933-3265</p>
+            <p>E-mail. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Header Sidebar-->
   </header>
   <script>
     const header_container = document.querySelector(".header")

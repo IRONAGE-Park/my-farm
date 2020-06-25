@@ -1,55 +1,64 @@
 /*공지사항 관리 테이블*/
-.section-contents-NoticeTable_box{
-    width: 100%;
+.section-contents-NoticeTable_box {
+  width: 100%;
 }
-.section-contents-NoticeTable{
-    margin-top: 30px;
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
+.section-contents-NoticeTable {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
 }
-.NoticeTable-hr_border_light{
-    border-bottom: 1px solid #707070;
+.NoticeTable-hr_border_light {
+  border-bottom: 1px solid #29c389;
 }
-.NoticeTable-hr_border_bold{
-    border-bottom: 2px solid #707070;
+.NoticeTable-hr_border_bold {
+  border-bottom: 2px solid #29c389;
+  height: 45px;
 }
-.NoticeTable-WhiteSpace{
-    padding: 25px 0 25px 0;
+.NoticeTable-WhiteSpace {
+  height: 45px;
 }
-.NoticeTable-number{
-    width: 12%;
+.NoticeTable-CheckBox {
+  width: 6%;
 }
-.NoticeTable-title{
-    width: 57%;
+.NoticeTable-number {
+  width: 6%;
 }
-.NoticeTable-writer{
-    width: 10.3%;
+.NoticeTable-title {
+  width: 57%;
 }
-.NoticeTable-visitor{
-    width: 10.3%;
+.NoticeTable-title a {
+  text-decoration: none;
+  color: #000;
 }
-.NoticeTable-CreatedDate{
-    width: 10.3%;
+.NoticeTable-writer {
+  width: 10.3%;
+}
+.NoticeTable-visitor {
+  width: 10.3%;
+}
+.NoticeTable-CreatedDate {
+  width: 10.3%;
 }
 /* 테이블 관리 기능 */
-.sub_function-box{
-    margin-top: 35px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.sub_function-box {
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.sub_function-button{
-    color: white;
-    background-color: black;
-    border: none;
-    width: 95px;
-    height: 46px;
-    border-radius: 25px;
-    font-weight: bold;
+.sub_function-button {
+  color: white;
+  background-color: #29c389;
+  border: none;
+  width: 95px;
+  height: 46px;
+  font-weight: bold;
 }
-.paging-image{
-    display: flex;
+#write_notice-js {
+  margin: 0 15px;
 }
-
+.paging-image {
+  display: flex;
+}

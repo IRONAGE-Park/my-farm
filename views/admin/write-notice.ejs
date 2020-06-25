@@ -13,39 +13,15 @@
 
 <body>
     <div class="container">
-        <nav class="nav-box">
-            <div class="nav_logo-box">
-                <a href="/admin/main" class='nav_logo'> <img src="/images/management/logo_white.svg" alt="로고에러" /></a>
-            </div>
-            <div class="nav-contents">
-                <div class="nav-contents_title">
-                    페이지 관리
-                </div>
-                <ul class="nav-contents_list">
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">공지사항 관리</a></li>
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">커뮤니티 관리</a></li>
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">다운로드 관리</a></li>
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">반품/환불 관리</a></li>
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">FAQ/문의하기 관리</a></li>
-                </ul>
-                <div class="nav-contents_title">
-                    포스트 관리
-                </div>
-                <ul class="nav-contents_list">
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">홈관리</a></li>
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">제품 관리</a></li>
-                    <li class='nav-contents_item'><a class='nav-contents_item_link' href="">예약 관리</a></li>
-                </ul>
-            </div>
-        </nav>
+            <%- include('./nav') %>
         <div class="section">
             <div class="section_title">
-                INVAIZ 관리자님 환영합니다
+                농장 관리자님 환영합니다
             </div>
             <div class="section-contents">
                 <h1 class='section-contents_title'>공지사항 관리</h1>
                 <hr class='section-contents_hr_light'>
-                <h2 class='section-contents_summary'>INVAIZ 공지사항 추가 페이지</h2>
+                <h2 class='section-contents_summary'>농장 공지사항 추가 페이지</h2>
                 <div class="write_notice-box">
                     <div class="write_notice-title-box">
                         <form action="/admin/notice-insert" method="POST">

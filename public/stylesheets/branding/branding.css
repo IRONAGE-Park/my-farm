@@ -1,49 +1,51 @@
 .branding-banner {
-    background-image: url(/images/branding/sub_visual1.jpg);
-}  
-.branding-title{
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
+  background-image: url(/images/branding/sub_visual1.jpg);
 }
-  .branding-nav{
-    width: 100%;
-    margin-top: 80px;
-    text-align: center;
-  }
-  
-  .branding-nav ul{
-    font-size: 0;
-  }
-  .branding-nav li{
-    display: inline-block;
-    width: 25%;
-    height: 50px;
-    background-color: #cdc9c9;
-    border-right: 1px solid white;
-    box-sizing: border-box;
-    transition: 0.5s;
-  }
-  .branding-nav li:hover, .branding-nav li.selected{
-    background-color: black;
-  }
-  .branding-nav li a{
-    text-decoration: none;
-    color: white;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    line-height: 50px;
-  }
+.branding-nav {
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+}
 
-  .branding-area {
-    padding: 50px 0;
-    margin: 50px 0;
+.branding-nav ul {
+  font-size: 0;
+}
+.branding-nav li {
+  display: inline-block;
+  width: 25%;
+  height: 50px;
+  background-color: #cdc9c9;
+  border: 1px solid white;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.branding-nav li:hover,
+.branding-nav li.selected {
+  background-color: black;
+}
+.branding-nav li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.branding-area {
+  padding: 50px 0;
+  margin: 50px 0;
+}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .branding-nav li {
+    width: 50%;
   }
-
-
-
-.float-left {float:left;}
-.float-right {float:right;}
+}

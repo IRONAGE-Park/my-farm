@@ -10,7 +10,9 @@
     width: 100%;
 }
 .write_notice-title_input{
-    width: 100%;
+  width: 100%; height: 3em;
+  box-sizing: border-box;
+  padding: 5px;
 }
 .write_notice-contents{
     width: 100%;
@@ -23,13 +25,11 @@
 .sbm-button{
   width: 95px;
   height: 46px;
-   font-size: 18px;
+  font-size: 18px;
   color: white;
   font-weight: bold;
-  background-color:#0066FF ;
+  background-color:#29c389;
   border: none;
- 
-  border-radius:25px ;
 }
 
 /* Set dropdown font-families */

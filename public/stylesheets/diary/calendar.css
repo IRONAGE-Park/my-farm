@@ -22,9 +22,6 @@
   padding: 40px 0 20px;
   background: #ddd;
 }
-.my-calendar .calendar-box {
-  padding-left: 30px;
-}
  
 .clicked-date .cal-day {
   font-size: 2em;
@@ -34,17 +31,17 @@
 }
 
 .ctr-box {
-  padding: 16px;
+  padding: 10px;
   margin-bottom: 20px;
   font-size: 2.5em;
+  line-height: 35px;
 }
 .ctr-box .btn-cal {
   position: relative;
   float: left;
-  width: 25px;
-  height: 25px;
+  width: 25px; height: 25px;
   margin-top: 5px;
-  font-size: 1.4em;
+  font-size: 1em;
   cursor: pointer;
   border: none;
   background: none;
@@ -52,10 +49,8 @@
 .ctr-box .btn-cal:after {
   content: '<';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   line-height: 25px;
   font-weight: bold;
 }
@@ -79,6 +74,7 @@
 .cal-table td {
   padding: 3px 0;
   height: 50px;
+  box-sizing: border-box;
   font-size: 1.32em;
   vertical-align: middle;
 }
@@ -121,7 +117,6 @@
   width: 3px; height: 3px;
   background-color: #fff;
 }
-
 .cal-table td.has-event:after {
   content: '';
   display: block;
@@ -131,4 +126,14 @@
   width: 100%;
   height: 4px;
   background: #FFC107;
+}
+
+@media (max-width: 1024px) {
+  .cal-table td { height: 40px; }
+  .ctr-box { margin-bottom: 15px; }
+}
+
+@media (max-width: 768px) {
+  .cal-table td { height: 30px; }
+  .ctr-box { margin-bottom: 10px; }
 }

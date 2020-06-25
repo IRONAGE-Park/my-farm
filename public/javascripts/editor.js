@@ -11,10 +11,6 @@ var options = {
 }
 var editor = new Quill(container, options);
 
-
-
-
-
 let submitButton = document.querySelector('.sbm-button')
 let hidden = document.querySelector('.hidden-JS')
 

@@ -7,9 +7,12 @@
 <div class="main">
   <div class="support_contents_container container">
     <div class="support_contents_box content">
+      <!--       
       <div class="support_logo_box">
         <img src="images/notice_logo.svg" alt="">
       </div>
+      -->
+      <div class="support-title title">공지사항</div>
       <div class="search_box">
         <input type="text" placeholder="농장 이용관련 검색">
         <button>조회하기</button>
@@ -37,7 +40,7 @@
             <td class='table_contents_border  table_ColNumber_style'>
               <%= contents[i-1].idx %> </td>
             <td class='table_contents_border table_Title_style'>
-              <a href="./support/notice_content/<%=contents[i-1].idx %>"><%= contents[i-1].title %></a>
+              <a href="/support/notice_content/<%=contents[i-1].idx %>"><%= contents[i-1].title %></a>
             </td>
             </td>
             <td class="table_contents_border  table_CreatedDate_style">
@@ -56,7 +59,7 @@
         <div class="table_page">
           <%  let cnt = 0;
             if(AllRows.length <=10) { %>
-          <a href="page=<%=1%>">1</a>
+          <a href="/support/page=<%=1%>">1</a>
           <%} else {  
               if(AllRows.length% 10 === 0 ){
                 cnt = AllRows.length / 10;
@@ -67,7 +70,7 @@
               }
           }%>
           <%for(let page = 1 ; page<=cnt; page++ ){%>
-            <a href="page=<%=page%>"><%= page %></a>
+            <a href="/support/page=<%=page%>"><%= page %></a>
           <%}%>
         </div>
       </div>

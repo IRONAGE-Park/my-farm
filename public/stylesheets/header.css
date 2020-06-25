@@ -55,21 +55,132 @@
 }
 .header-nav-element a:hover span:after {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 0; bottom: -9px;
   content: "";
   display: block;
-  height: 2px;
+  width: 100%; height: 2px;
   background: #29c389;
-  width: 100%;
-  bottom: -9px;
 }
 .header.drop .header-nav-element a:hover {color: #000;}
 .header.drop .header-nav-element a:hover span:after {background: #000;}
 
 
+
+/* Mobile CSS Area */
+.mobile {visibility: hidden;}
+.header-sidebar {
+  position: fixed;
+  top: 0; right: 0;
+  width: 100%; height: 100%;
+  background-color: #29c389;
+  transform: translateX(100%);
+  transition: transform .5s;
+  color: #fff;
+  font-size: 12px;
+}
+.header-sidebar.active {
+  transform: none;
+}
+/* MOBILE NAVIGATION HAMBURGER */
+.sidebar-hamburger {height: 65px;}
+.ham {
+  height: 65px;
+  transform: translateX(-100%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform, height .5s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray .5s, stroke-dashoffset .5s;
+  stroke:#fff;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+.hamburger .top {
+  stroke-dasharray: 40 160;
+}
+.hamburger .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform .5s;
+}
+.hamburger .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform .5s, stroke-dashoffset .5s;
+}
+.hamburger.active .top {
+  stroke-dashoffset: -64px;
+}
+.hamburger.active .middle {
+  /* stroke-dashoffset: -20px; */
+  transform: rotate(90deg);
+}
+.hamburger.active .bottom {
+  stroke-dashoffset: -64px;
+}
+/* MOBILE NAVIGATION HAMBURGER */
+
+.sidebar-content {
+  box-sizing: border-box;
+  padding: 15px;
+  line-height: 1.2;
+}
+.sidebar-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.sidebar-area {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.sidebar-logo {
+  margin-left: 30px;
+  width: 100%;
+  height: 200px;
+}
+
+.sidebar-menu-list {
+  list-style: none;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+.sidebar-menu-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+.sidebar-menu-element {
+  border-bottom: solid 1.5px #fff;
+  padding-bottom: 2.5px;
+  margin-bottom: 5px;
+}
+
+.sidebar-contact-info {
+  padding-left: 30px;
+  line-height: 2;
+}
+
 @media (max-width: 768px) {
+  .header {
+    height: 65px;
+    background-color: rgba(30, 30, 30, 0.6);
+  }
   .header-nav-box {
     display: none;
   }
+  .mobile {visibility: visible;}
 }
