@@ -6,6 +6,8 @@
 .pnp.js
 dbconfig.js
 
+*.sql
+
 # testing
 /coverage
 

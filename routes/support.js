@@ -30,6 +30,7 @@ router.get("/", function (req, res, next) {
 
 
 router.get('/notice_content/:idx', function (req, res, next) {
+    console.log(req);
     var idx = parseInt(req.params.idx);
     if (idx === 0) {
         res.send('<script type="text/javascript">alert("이전 페이지가 없습니다");</script>');
