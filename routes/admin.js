@@ -76,6 +76,14 @@ router.get('/main', function (req, res) {
         res.render('admin/main');
     }
 });
+router.get('/diary', function (req, res) {
+    if (!req.session.name) {
+        res.send('<script>alert("로그인을 해주세요");history.go(-1);</script>')
+    }
+    else {
+        res.render('admin/diary');
+    }
+})
 
 router.get('/notice', function (req, res) {
     if (!req.session.name)
@@ -127,12 +135,13 @@ router.post('/notice-update', function (req, res) {
     if (!req.session.name)
         res.send('<script>alert("로그인을 해주세요");history.go(-1);</script>');
     else {
+        const idx = req.body.notice_idx;
         let title = req.body.notice_title;
         let delta = req.body.notice_contents;
         let contents = convertDeltaToHtml(JSON.parse(delta));
 
-        const query = `UPDATE notice SET title=?,content=? `;
-        connection.query(query, [title, contents], function (err) {
+        const query = `UPDATE notice SET title=?,content=? WHERE idx=?`;
+        connection.query(query, [title, contents, idx], function (err) {
             if (err) throw err;
             res.redirect('notice');
         });

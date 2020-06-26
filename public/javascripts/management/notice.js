@@ -4,16 +4,12 @@ const checkbox_head = document.querySelector('#head-checkbox-JS');
 const checkbox_element = document.querySelectorAll('#checkbox-JS');
 
 const logout = document.querySelector('#logout-js');
-console.log(checkbox_element);
 insert.addEventListener('click', function () {
     window.location.href = '/admin/write-notice';
 })
-
 logout.addEventListener('click', function () {
     window.location.href = '/admin/logout';
 })
-
-
 checkbox_head.addEventListener('click', function () {
     // 체크박스 헤드의 상태가 true면 false 
     // 체크박스 헤드가 상태가 false면 true

@@ -4,50 +4,17 @@
 <div class="schedule">
     <div class="schedule-wrap">
         <div class="schedule-content">
-            <form id="schedule-form" action="./" method="get">
+            <form id="schedule-form" action="/" method="get">
                 <h3>오늘의 농장</h3>
                 <h4>Contact us for custom quote</h4>
-                <fieldset>
-                    <input id="title" placeholder="제목" type="text" tabindex="1" required autofocus>
-                </fieldset>
-                <div id="toolbarJS">
-                    <span class="ql-formats">
-                        <select class="ql-header">
-                            <option value="1"></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
-                            <option value="4"></option>
-                            <option value='5'></option>
-                            <option value='6'></option>
-                        </select>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-bold"></button>
-                        <button class="ql-italic"></button>
-                        <button class="ql-underline"></button>
-                        <button class="ql-strike"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-align" value='justify'></button>
-                        <button class="ql-align" value='center'></button>
-                        <button class="ql-align" value='right'></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-link"></button>
-                        <button class="ql-image"></button>
-                    </span>
-                </div>
+                <div class="schedule-title" id="title"></div>
                 <div id="quillJS">
-                </div>
-                <div class="submit-box">
-                    <input type="hidden" class="hidden-Date" name="notice_date" value=''>
-                    <input type="hidden" class='hidden-JS' name='notice_contents' value=''>
-                    <button type="submit" class='sbm-button'>등록</button>
+                    <div class="ql-editor">
+
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-<script src="./javascripts/schedule.js"></script>
 <!-- SCHEDULE AREA -->

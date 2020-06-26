@@ -41,14 +41,18 @@ router.get('/notice_content/:idx', function (req, res, next) {
     let update_query = `UPDATE notice set viewcount=viewcount+1 WHERE idx=?`;
     // 조회수 업데이트 코드
     let select_query = `SELECT * FROM notice`;
-
     connection.query(update_query, idx, function (err, next) {
-        if (err) throw err;
+        if (err) {
+            res.status(404).end();
+            throw err;
+        }
     })
     connection.query(select_query, function (err, rows, next) {
-        if (err) throw err;
+        if (err) {
+            res.status(404).end();
+            throw err;
+        }
         else {
-            console.log(idx, rows.length)
             if (idx > rows.length) {
                 res.send('<script type="text/javascript">alert("다음 페이지가 없습니다");</script>');
                 // 페이지를 뒤쪽으로 계속 넘겼을때 다음 페이지가 없을 경우

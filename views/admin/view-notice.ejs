@@ -25,6 +25,7 @@
                 <div class="write_notice-box">
                     <div class="write_notice-title-box">
                         <form action="/admin/notice-update" method="POST">
+                            <input type="hidden" name="notice_idx" value='<%= notice_content[0].idx %>' />
                             <h3>제목</h3>
                             <input type="text" class='write_notice-title_input' name='notice_title'
                                 value='<%= notice_content[0].title %>'>

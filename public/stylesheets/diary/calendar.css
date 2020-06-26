@@ -93,19 +93,20 @@
   transition: max-width, max-height .3s;
 }
 .cal-table td.day:hover::before {
-  border: solid 2px #29c389;
+  border: solid 2px #ff8585;;
   max-width: 40px; max-height: 40px;
 }
 .cal-table td.today::before {
-  background: #ffd255;
+  background: #33d2ff;
+  border: solid 2px #33d2ff;
   max-width: 40px; max-height: 40px;
 }
 .cal-table td.day-active::before {
-  background: #ff8585;
+  background: #29c389;
   max-width: 40px; max-height: 40px;
 }
 .cal-table td.save::before {
-  background: #29c389;
+  background: #ff8585;
   max-width: 40px; max-height: 40px;
 }
 .cal-table td.save::after {

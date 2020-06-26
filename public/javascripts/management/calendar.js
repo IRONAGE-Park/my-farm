@@ -97,6 +97,7 @@ function loadYYMM(fullDate) {
 
 function initToday() {
   const fdate = init.today.getFullYear() + '-' + init.addZero(init.today.getMonth() + 1) + '-' + init.addZero(init.today.getDate());
+  document.querySelector('.hidden-Date').value = fdate;
   renderDiaryContent(scheduleContainer[fdate]);
 }
 
@@ -123,11 +124,11 @@ function createNewList(val) {
 
 function renderDiaryContent(diary) {
   if (diary) {
-    document.querySelector('#title').innerHTML = diary.title;
-    document.querySelector('.ql-editor').innerHTML = diary.content;
+    document.querySelector('#title').value = diary.title;
+    container.querySelector('.ql-editor').innerHTML = diary.content;
   } else {
-    document.querySelector('#title').innerHTML = '아무 소식이 없네요!';
-    document.querySelector('.ql-editor').innerHTML = '오늘은 저희 농장이 쉬고 가네요!';
+    document.querySelector('#title').value = '';
+    container.querySelector('.ql-editor').innerHTML = '';
   }
 }
 
@@ -136,6 +137,7 @@ $btnPrev.addEventListener('click', () => loadYYMM(init.prevMonth()));
 
 $calBody.addEventListener('click', (e) => {
   if (e.target.classList.contains('day')) {
+    document.querySelector('.hidden-Date').value = e.target.dataset.fdate;
     if (init.activeDTag) {
       init.activeDTag.classList.remove('day-active');
     }
