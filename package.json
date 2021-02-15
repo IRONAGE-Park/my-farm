@@ -3,8 +3,9 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "pm2 start ./bin/www --name farm",
+        "start": " NODE_ENV=production PORT=80 pm2 start ./bin/www -i 0 --name farm",
         "stop": "pm2 stop farm",
+        "reload": "pm2 reload all",
         "delete": "pm2 delete farm",
         "dev": "node ./bin/www"
     },
